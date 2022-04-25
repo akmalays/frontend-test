@@ -12,11 +12,14 @@ function Sidenav() {
   const [openTab, setOpenTab] = useState(1);
 
   return (
-    <div className="max-w-md">
+    <div className="ml-[-36px] w-md">
       <Tab>
-        <div className="flex justify-start">
-          <TabList className="max-w-[150px]" color="blueGray">
-            <div className="grid">
+        <div className="flex justify-start mt-10 text-xs">
+          <TabList
+            className="max-w-[100px]  h-screen rounded-none"
+            color="blueGray"
+          >
+            <div className="grid h-[400px]">
               <TabItem
                 onClick={(e) => {
                   e.preventDefault();

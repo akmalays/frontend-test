@@ -12,7 +12,7 @@ function Mainroute() {
           <Sidenav />
         </div>
         <div className="col-span-2">
-          <div className=" inline-flex max-w-screen  pt-10">
+          <div className=" inline-flex max-w-screen z-0 pt-10">
             <Maps />
           </div>
         </div>
