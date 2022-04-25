@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ImLocation2 } from "react-icons/im";
 import { GoGlobe } from "react-icons/go";
 import { FaTimes } from "react-icons/fa";
