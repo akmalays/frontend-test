@@ -1,7 +1,7 @@
 import React from "react";
 import { ImLocation2 } from "react-icons/im";
 import { GoGlobe } from "react-icons/go";
-import image1 from "../assets/merlion-park20191008171420.jpg";
+import Image1 from "../assets/merlion-park20191008171420.jpg";
 
 function Popup(props) {
   return (
@@ -9,7 +9,7 @@ function Popup(props) {
       <div className="bg-gray-700 h-screen w-[250px] ">
         <div className="flex flex-col">
           <div className="w-50px">
-            <image src={image1} height={50} width={50} />
+            <img src={Image1} height={50} width={250} alt="img-singapore" />
           </div>
           <div className="bg-sky-300 px-4 text-white text-lg font-semibold">
             <p> Merlion {props.place_name}</p>
