@@ -1,46 +1,64 @@
 [
   {
+    "id": 1,
+    "desc": "The Merlion is the national personification of singapore",
     "latitude": 1.28692,
     "longitude": 103.85457,
     "place_name": "Merlion"
   },
   {
+    "id": 2,
+    "desc": "museum for singaporeans, the best place to get some historic information",
     "latitude": 1.287466,
     "longitude": 103.851424,
     "place_name": "Asian Civilisations Museum"
   },
   {
+    "id": 3,
+    "desc": "From iconic dance clubs to live music venues and rooftop bars, this ultimate guide to drinking and partying in both Clarke Quay and Boat Quay is a must-have for anyone looking for a boozy good time in the city.",
     "latitude": 1.290555,
     "longitude": 103.846188,
     "place_name": "Clarke Quay"
   },
 
   {
+    "id": 4,
+    "desc": "The Merlion is the national personification of singapore",
     "latitude": 1.295526,
     "longitude": 103.845331,
     "place_name": "Fort Canning Park"
   },
   {
+    "id": 5,
+    "desc": "best place to get street food at the cheapest price",
     "latitude": 1.302279,
     "longitude": 103.837399,
     "place_name": "Orchard Road"
   },
   {
+    "id": 6,
+    "desc": "This giant observation wheel offers 360-degree city views, a panorama that stretches to parts of Malaysia and Indonesia on a clear day.",
     "latitude": 1.289332,
     "longitude": 103.863152,
     "place_name": "Singapore Flyer"
   },
   {
+    "id": 7,
+    "desc": "clear sky, calm waves and white sands, no more words can saying about this place except amazing",
     "latitude": 1.283099,
     "longitude": 103.860295,
     "place_name": " Marina Bay Sands"
   },
   {
+    "id": 8,
+    "desc": "you can view many exotic garden in here, the best place for healing",
     "latitude": 1.28179,
     "longitude": 103.863954,
     "place_name": "Gardens By The Bay"
   },
   {
+    "id": 9,
+    "desc": "Chinatown is one of the best place for chinese people in singapore",
     "latitude": 1.284193,
     "longitude": 103.843362,
     "place_name": "Chinatown"

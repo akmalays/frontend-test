@@ -16,7 +16,7 @@ function Sidenav() {
       <Tab>
         <div className="flex justify-start mt-10 text-xs">
           <TabList
-            className="max-w-[100px]  h-screen rounded-none"
+            className="max-w-[200px]  h-screen rounded-none bg-sky-300"
             color="blueGray"
           >
             <div className="grid h-[400px]">
@@ -25,7 +25,7 @@ function Sidenav() {
                   e.preventDefault();
                   setOpenTab(1);
                 }}
-                ripple="light"
+                ripple="cyan"
                 active={openTab === 1 ? true : false}
                 href="tabItem"
                 className="flex-col"
@@ -86,7 +86,7 @@ function Sidenav() {
             </div>
           </TabList>
 
-          <TabContent>
+          <TabContent className="bg-gray-800">
             <TabPane active={openTab === 1 ? true : false}>
               <p>
                 I think that’s a responsibility that I have, to push

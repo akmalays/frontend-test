@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import getCenter from "geolib/es/getCenter";
 import mapData from "../data/data.json";
 import { ImLocation2 } from "react-icons/im";
-import Popup from "../components/popup";
+import Popup from "./popup";
 
 const token =
   "pk.eyJ1IjoiYWttYWxheXMiLCJhIjoiY2wwM3dxOWpzMWkwdDNpbHNoc3ViNGdvMCJ9.dK_FtvTA0JCkQ1TM3BYBtA";
 
 function Maps() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [markerSelected, setMarkerSelected] = useState("");
+
+  const doSelectMarker = (statusOpen, dataSelected) => {
+    setIsOpen(statusOpen);
+    setMarkerSelected(dataSelected);
+  };
+
   const coordinates = mapData.map((result) => ({
     longitude: result.longitude,
     latitude: result.latitude,
@@ -43,8 +51,13 @@ function Maps() {
                 offsetTop={-10}
                 className="hover:scale-150"
               >
-                <div className="flex animate-bounce cursor-pointer  ">
-                  <div className="flex hover:scale-150 ">
+                <div className="flex animate-bounce cursor-pointer ">
+                  <div
+                    className="flex hover:scale-150  "
+                    onClick={() => {
+                      doSelectMarker(true, result);
+                    }}
+                  >
                     <ImLocation2 className="text-red-800 " size={60} />
                     <span className="ml-[-42px] mt-1 bg-black hover:bg-green-600 h-7 rounded-l-full">
                       <p className=" px-4 py-1 font-bold text-[9px] text-white ">
@@ -58,9 +71,11 @@ function Maps() {
           ))}
         </ReactMapGL>
       </div>
-      <div className="flex justify-end relative z-20">
-        <Popup />
-      </div>
+      {isOpen ? (
+        <div className="flex justify-end relative z-20">
+          <Popup markerSelected={markerSelected} />
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -4,6 +4,8 @@ import { GoGlobe } from "react-icons/go";
 import Image1 from "../assets/merlion-park20191008171420.jpg";
 
 function Popup(props) {
+  console.log(props, "ini props selected marker");
+  const markerSelected = props.markerSelected;
   return (
     <div>
       <div className="bg-gray-700 h-screen w-[250px] ">
@@ -12,11 +14,11 @@ function Popup(props) {
             <img src={Image1} height={50} width={250} alt="img-singapore" />
           </div>
           <div className="bg-sky-300 px-4 text-white text-lg font-semibold">
-            <p> Merlion {props.place_name}</p>
+            <p> {markerSelected.place_name ? markerSelected.place_name : ""}</p>
           </div>
           <div className="text-left font-semibold text-xs px-4 py-5">
             <p className="pb-5 text-[11px]">
-              The Merlion is the national personification of singapore
+              {markerSelected.desc ? markerSelected.desc : ""}
             </p>
             <p className="text-[11px]">
               {" "}
