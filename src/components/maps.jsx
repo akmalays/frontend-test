@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 import getCenter from "geolib/es/getCenter";
 import mapData from "../data/data.json";
@@ -73,7 +73,7 @@ function Maps() {
       </div>
       {isOpen ? (
         <div className="flex justify-end relative z-20">
-          <Popup markerSelected={markerSelected} />
+          <Popup markerSelected={markerSelected} openstatus={setIsOpen} />
         </div>
       ) : null}
     </div>

@@ -1,17 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { ImLocation2 } from "react-icons/im";
 import { GoGlobe } from "react-icons/go";
+import { FaTimes } from "react-icons/fa";
 import Image1 from "../assets/merlion-park20191008171420.jpg";
 
 function Popup(props) {
   console.log(props, "ini props selected marker");
   const markerSelected = props.markerSelected;
+  const statusOpen = props.openstatus;
   return (
     <div>
       <div className="bg-gray-700 h-screen w-[250px] ">
         <div className="flex flex-col">
           <div className="w-50px">
-            <img src={Image1} height={50} width={250} alt="img-singapore" />
+            <div className="flex justify-end cursor-pointer p-1 ">
+              <FaTimes
+                className="text-red-800 "
+                size={20}
+                onClick={() => {
+                  statusOpen(false);
+                }}
+              />
+            </div>
+            <img
+              src={Image1}
+              className="z-0"
+              height={50}
+              width={250}
+              alt="img-singapore"
+            />
           </div>
           <div className="bg-sky-300 px-4 text-white text-lg font-semibold">
             <p> {markerSelected.place_name ? markerSelected.place_name : ""}</p>
